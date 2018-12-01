@@ -1,0 +1,64 @@
+RESULTS
+
+Decison Tree:
+
+4 fold Cross Validation Grid search over the following hyperparameters:
+
+'criterion':  	'gini', 'entropy'
+'max_depth':  	 4, 5, 7, 9, 11
+
+Best Parameters :
+
+'criterion': 'entropy'
+'max_depth': 7
+
+
+Overall Results:
+
+precision_score:  0.6205250596658711
+recall_score:  0.6032482598607889
+f1_score:  0.611764705882353
+
+Fully connected Neural Network
+
+4 fold Cross Validation Grid search over the following hyperparameters:
+
+'hidden_layer_sizes':	(12,5),(10,5),(8,5) 
+'activation':			['relu', 'logistic']
+'solver': 				['adam']
+'learning_rate_init': 	[0.001, 0.003, 0.006, 0.01]
+'max_iter': 			[1000, 1500]
+
+Best Parameters :
+
+'activation': 			'logistic'
+'hidden_layer_sizes': 	(12, 5)
+'learning_rate_init':	0.003
+'max_iter':				1000
+'random_state': 		1
+'solver': 				'adam'
+
+Overall Results:
+
+precision_score:  0.5992292870905588
+recall_score:  0.7215777262180975
+f1_score:  0.6547368421052632
+
+SVM:
+
+4 fold Cross Validation Grid search over the following hyperparameters:
+
+'C':		[1.0, 0.8]
+'kernel':	['linear', 'rbf'] 
+'gamma':	['auto', 'scale']
+
+Best Parameters:
+
+'C': 		0.8
+'gamma': 	'auto'
+'kernel': 	'linear'
+
+precision_score:  0.593952483801296
+recall_score:  0.6380510440835266
+f1_score:  0.6152125279642058
+
